@@ -167,7 +167,7 @@ public class _PlayerMovement : MonoBehaviour
         playerVel.y -= gravity * Time.deltaTime;
     }
 
-    //Code is not mine however I understand it and saw no purpose in recreating it
+ 
     private void AddFriction(float amount)
     {
         Vector3 vec = playerVel; 
@@ -213,7 +213,6 @@ public class _PlayerMovement : MonoBehaviour
 
     private void CollisionMovement(Vector3 wallNormal, Vector3 velocity)
     {
-        //Matthew helped me with the Vector math and explained dot product and vector projection to me
         float dotProduct = Vector3.Dot(wallNormal, velocity);
         Vector3 parallelVelocity = dotProduct*wallNormal;
         Vector3 perpendicularVelocity = velocity - parallelVelocity;
